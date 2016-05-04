@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Intro to PyEPICS</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -24,8 +24,41 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+          ## Intro to PyEPICS
+        </section>
+				<section data-markdown>
+          ## Installation
+
+          Dependencies:
+
+          * EPICS Base shared libraries
+          * Python 2.6+ or Python 3.2+
+          * *Optional:* numpy for nicer array handling
+
+          ```bash
+          pip install pyepics
+          export PYEPICS_LIBCA=/epics/base/lib/linux-x86_64/libca.so
+          ```
+
+        </section>
+				<section data-markdown>
+          ## Getting values
+
+          ```python
+          >>> import epics
+          >>> 
+          >>> beam_current_pv = epics.PV('SR11BCM01:CURRENT_MONITOR')
+          >>> beam_current_pv.get()
+          165.304845902
+          >>> 
+          >>> beam_mode_enum_pv = epics.PV('FS01:BEAM_MODE_MONITOR')
+          >>> beam_mode_enum_pv.get()
+          2
+          >>> beam_mode_enum_pv.get(as_string=True)
+          'Maintenance'
+          ```
+        </section>
 			</div>
 		</div>
 
@@ -33,11 +66,8 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
