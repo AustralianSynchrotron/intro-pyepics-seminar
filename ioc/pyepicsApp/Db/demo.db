@@ -8,12 +8,14 @@ record (calc,"PYEPICS_DEMO:CALC") {
    field (EGU, "mA")
 }
 
+
 record (sub, "PYEPICS_DEMO:SUB") {
   field (SCAN, "1 second")
   field (INAM, "initSubroutine")
   field (SNAM, "processSubroutine")
   field (INPA, "81")
 }
+
 
 record (aSub, "PYEPICS_DEMO:SPECTRUM_GENERATOR") {
   field (SCAN, "1 second")
@@ -23,7 +25,17 @@ record (aSub, "PYEPICS_DEMO:SPECTRUM_GENERATOR") {
   field (OUTA, "PYEPICS_DEMO:SPECTRUM PP")
 }
 
+
 record (waveform, "PYEPICS_DEMO:SPECTRUM") {
   field (FTVL, "FLOAT")
   field (NELM, "100")
+}
+
+
+record (mbbo, "PYEPICS_DEMO:COLOUR") {
+  field (VAL, "0")
+  field (PINI, "YES")
+  field (ZRST, "red")
+  field (ONST, "green")
+  field (TWST, "blue")
 }
