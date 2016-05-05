@@ -6,37 +6,37 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>404</width>
+    <height>402</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QELabel" name="qelabel">
+  <widget class="QEPlot" name="qeplot">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>90</y>
-     <width>181</width>
-     <height>41</height>
+     <x>20</x>
+     <y>30</y>
+     <width>351</width>
+     <height>121</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>30</pointsize>
-    </font>
-   </property>
-   <property name="variable" stdset="0">
-    <string>SR11BCM01:CURRENT_MONITOR</string>
+   <property name="variable1" stdset="0">
+    <string>PYEPICS_DEMO:SPECTRUM</string>
    </property>
   </widget>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QELabel</class>
-   <extends>QLabel</extends>
-   <header>QELabel.h</header>
+   <class>QEPlot</class>
+   <extends>QwtPlot</extends>
+   <header>QEPlot.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QwtPlot</class>
+   <extends>QFrame</extends>
+   <header>qwt_plot.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
