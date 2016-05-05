@@ -1,0 +1,8 @@
+ioc/bin/
+ioc/configure/O.darwin-x86/
+ioc/db/
+ioc/dbd/
+ioc/iocBoot/iocpyepics/envPaths
+ioc/pyepicsApp/Db/O.darwin-x86/
+ioc/pyepicsApp/src/O.Common/
+ioc/pyepicsApp/src/O.darwin-x86/
