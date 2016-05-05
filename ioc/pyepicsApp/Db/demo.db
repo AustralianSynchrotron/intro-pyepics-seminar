@@ -14,3 +14,16 @@ record (sub, "PYEPICS_DEMO:SUB") {
   field (SNAM, "processSubroutine")
   field (INPA, "81")
 }
+
+record (aSub, "PYEPICS_DEMO:SPECTRUM_GENERATOR") {
+  field (SCAN, "1 second")
+  field (SNAM, "processSpectrum")
+  field (FTVA, "FLOAT")
+  field (NOVA, "100")
+  field (OUTA, "PYEPICS_DEMO:SPECTRUM PP")
+}
+
+record (waveform, "PYEPICS_DEMO:SPECTRUM") {
+  field (FTVL, "FLOAT")
+  field (NELM, "100")
+}
