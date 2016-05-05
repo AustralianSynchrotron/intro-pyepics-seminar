@@ -12,7 +12,7 @@ dbLoadDatabase "dbd/pyepics.dbd"
 pyepics_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
-dbLoadRecords("db/basic.db")
+dbLoadRecords("db/demo.db")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

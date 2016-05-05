@@ -16,13 +16,15 @@ DBD += pyepics.dbd
 pyepics_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#pyepics_DBD += xxx.dbd
+pyepics_DBD += subroutine.dbd
 
 # Add all the support libraries needed by this IOC
 #pyepics_LIBS += xxx
 
 # pyepics_registerRecordDeviceDriver.cpp derives from pyepics.dbd
 pyepics_SRCS += pyepics_registerRecordDeviceDriver.cpp
+
+pyepics_SRCS += subroutine.c
 
 # Build the main IOC entry point on workstation OSs.
 pyepics_SRCS_DEFAULT += pyepicsMain.cpp

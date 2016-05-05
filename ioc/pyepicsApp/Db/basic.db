@@ -1,9 +1,0 @@
-record(calc,"PYEPICS_DEMO:CALC") {
-   field (DESC, "Example calc")
-   field (SCAN, "Passive")
-   field (PINI, "YES")
-   field (INPA, "2")
-   field (INPB, "3")
-   field (CALC, "A * B")
-   field (EGU, "mA")
-}
