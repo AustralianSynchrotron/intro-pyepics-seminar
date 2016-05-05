@@ -47,16 +47,28 @@
 
           ```python
           >>> import epics
-          >>> 
           >>> beam_current_pv = epics.PV('SR11BCM01:CURRENT_MONITOR')
           >>> beam_current_pv.get()
           165.304845902
-          >>> 
+          ```
+        </section>
+				<section data-markdown>
+          ## Enum PVs
+
+          ```python
           >>> beam_mode_enum_pv = epics.PV('FS01:BEAM_MODE_MONITOR')
           >>> beam_mode_enum_pv.get()
           2
           >>> beam_mode_enum_pv.get(as_string=True)
           'Maintenance'
+          ```
+        </section>
+				<section data-markdown>
+          ## Putting Values
+
+          ```python
+          >>> some_pv = epics.PV('SOME_PV')
+          >>> some_pv.put(100)
           ```
         </section>
 			</div>
