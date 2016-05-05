@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>404</width>
-    <height>402</height>
+    <width>454</width>
+    <height>398</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,9 +16,9 @@
   <widget class="QEPlot" name="qeplot">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>30</y>
-     <width>351</width>
+     <width>431</width>
      <height>121</height>
     </rect>
    </property>
@@ -26,12 +26,56 @@
     <string>PYEPICS_DEMO:SPECTRUM</string>
    </property>
   </widget>
+  <widget class="QEAnalogSlider" name="qeanalogslider">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>190</y>
+     <width>381</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="precision" stdset="0">
+    <number>2</number>
+   </property>
+   <property name="majorInterval">
+    <double>1.000000000000000</double>
+   </property>
+   <property name="tracking">
+    <bool>true</bool>
+   </property>
+   <property name="showSaveRevert">
+    <bool>false</bool>
+   </property>
+   <property name="showApply">
+    <bool>false</bool>
+   </property>
+   <property name="variable" stdset="0">
+    <string>PYEPICS_DEMO:ANALOG</string>
+   </property>
+   <property name="continuousWrite">
+    <bool>true</bool>
+   </property>
+   <property name="autoScale">
+    <bool>false</bool>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>QEAnalogSlider</class>
+   <extends>QAnalogSlider</extends>
+   <header>QEAnalogSlider.h</header>
+  </customwidget>
   <customwidget>
    <class>QEPlot</class>
    <extends>QwtPlot</extends>
    <header>QEPlot.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QAnalogSlider</class>
+   <extends>QFrame</extends>
+   <header>QAnalogSlider.h</header>
   </customwidget>
   <customwidget>
    <class>QwtPlot</class>
