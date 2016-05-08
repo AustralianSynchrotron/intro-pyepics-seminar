@@ -15,21 +15,37 @@ static float randomFloatFromRange (float min, float max) {
 }
 
 
-typedef long (*processMethod) (subRecord *precord);
+typedef long (*processMethod) (subRecord* record);
 
 
-static long initSubroutine (subRecord *precord, processMethod process) {
-  precord->val = 25;
+static long initSubroutine (subRecord* record, processMethod process) {
+  record->val = 5.123;
   return 0;
 }
 
 
-static long processSubroutine (subRecord *precord) {
-  precord->val += randomFloatFromRange(-.1, .1);
-  precord->udf = 0;
+static long processSubroutine (subRecord* record) {
+  record->val += randomFloatFromRange(-.1, .1);
+  record->udf = 0;
+  return 0;
+}
+
+
+static long processReadback (subRecord* record) {
+  double stepSize = .25;
+  if (fabs(record->val - record->a) <= stepSize) {
+    record->val = record->a;
+  } else if (record->val < record->a) {
+    record->val += stepSize;
+  } else if (record->val > record->a) {
+    record->val -= stepSize;
+  }
+  record->udf = 0;
   return 0;
 }
 
 
 epicsRegisterFunction(initSubroutine);
 epicsRegisterFunction(processSubroutine);
+
+epicsRegisterFunction(processReadback);

@@ -8,6 +8,14 @@ record (ao, "PYEPICS_DEMO:SETPOINT") {
 }
 
 
+record (sub, "PYEPICS_DEMO:READBACK") {
+  field (SCAN, ".1 second")
+  field (SNAM, "processReadback")
+  field (INPA, "PYEPICS_DEMO:SETPOINT")
+  field (PREC, 3)
+}
+
+
 record (calc, "PYEPICS_DEMO:CALC") {
   field (DESC, "Example calc")
   field (SCAN, "Passive")
