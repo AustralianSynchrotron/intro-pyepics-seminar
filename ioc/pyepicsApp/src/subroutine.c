@@ -9,18 +9,24 @@
 #include <epicsMath.h>
 
 
+static float randomFloatFromRange (float min, float max) {
+  float v = (float)rand()/(float)(RAND_MAX);
+  return (max - min) * v + min;
+}
+
+
 typedef long (*processMethod) (subRecord *precord);
 
 
 static long initSubroutine (subRecord *precord, processMethod process) {
+  precord->val = 25;
   return 0;
 }
 
 
 static long processSubroutine (subRecord *precord) {
-  double input = precord->a; // Access the INPA field of the record
-  precord->val = sqrt(input);
-  precord->udf = 0; // Flag the record as no-longer undefined
+  precord->val += randomFloatFromRange(-.1, .1);
+  precord->udf = 0;
   return 0;
 }
 

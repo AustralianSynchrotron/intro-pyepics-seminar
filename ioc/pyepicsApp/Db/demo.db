@@ -1,4 +1,4 @@
-record (ao, "PYEPICS_DEMO:ANALOG") {
+record (ao, "PYEPICS_DEMO:SETPOINT") {
   field (VAL, "7")
   field (PINI, "YES")
 }
@@ -15,11 +15,11 @@ record (calc, "PYEPICS_DEMO:CALC") {
 }
 
 
-record (sub, "PYEPICS_DEMO:SUB") {
+record (sub, "PYEPICS_DEMO:TEMPERATURE") {
   field (SCAN, "1 second")
   field (INAM, "initSubroutine")
   field (SNAM, "processSubroutine")
-  field (INPA, "81")
+  field (PREC, 3)
 }
 
 

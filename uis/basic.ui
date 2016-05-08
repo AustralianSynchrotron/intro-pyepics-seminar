@@ -6,66 +6,173 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>454</width>
-    <height>398</height>
+    <width>720</width>
+    <height>855</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QEPlot" name="qeplot">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>30</y>
-     <width>431</width>
-     <height>121</height>
-    </rect>
-   </property>
-   <property name="variable1" stdset="0">
-    <string>PYEPICS_DEMO:SPECTRUM</string>
-   </property>
-  </widget>
-  <widget class="QEAnalogSlider" name="qeanalogslider">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>190</y>
-     <width>381</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="precision" stdset="0">
-    <number>2</number>
-   </property>
-   <property name="majorInterval">
-    <double>1.000000000000000</double>
-   </property>
-   <property name="tracking">
-    <bool>true</bool>
-   </property>
-   <property name="showSaveRevert">
-    <bool>false</bool>
-   </property>
-   <property name="showApply">
-    <bool>false</bool>
-   </property>
-   <property name="variable" stdset="0">
-    <string>PYEPICS_DEMO:ANALOG</string>
-   </property>
-   <property name="continuousWrite">
-    <bool>true</bool>
-   </property>
-   <property name="autoScale">
-    <bool>false</bool>
-   </property>
-  </widget>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,2,4,4,4">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <italic>false</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>PYEPICS_DEMO:TEMPERATURE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QELabel" name="qelabel">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="variable" stdset="0">
+        <string>PYEPICS_DEMO:TEMPERATURE</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>PYEPICS_DEMO:COLOUR</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QEComboBox" name="qecombobox">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="variable" stdset="0">
+        <string>PYEPICS_DEMO:COLOUR</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>PYEPICS_DEMO:SETPOINT</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QEAnalogSlider" name="qeanalogslider">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="precision" stdset="0">
+        <number>2</number>
+       </property>
+       <property name="majorInterval">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="tracking">
+        <bool>true</bool>
+       </property>
+       <property name="showSaveRevert">
+        <bool>false</bool>
+       </property>
+       <property name="showApply">
+        <bool>false</bool>
+       </property>
+       <property name="variable" stdset="0">
+        <string>PYEPICS_DEMO:SETPOINT</string>
+       </property>
+       <property name="continuousWrite">
+        <bool>true</bool>
+       </property>
+       <property name="autoScale">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QEPlot" name="qeplot_2">
+     <property name="variable1" stdset="0">
+      <string>PYEPICS_DEMO:SETPOINT</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QEPlot" name="qeplot">
+     <property name="variable1" stdset="0">
+      <string>PYEPICS_DEMO:SPECTRUM</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
  </widget>
  <customwidgets>
   <customwidget>
    <class>QEAnalogSlider</class>
    <extends>QAnalogSlider</extends>
    <header>QEAnalogSlider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QEComboBox</class>
+   <extends>QComboBox</extends>
+   <header>QEComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QELabel</class>
+   <extends>QLabel</extends>
+   <header>QELabel.h</header>
   </customwidget>
   <customwidget>
    <class>QEPlot</class>

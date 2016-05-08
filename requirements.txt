@@ -1,4 +1,4 @@
-pyepics==3.2.5rc3
-jupyter==1.0.0
-numpy==1.11.0
-matplotlib==1.5.1
+pyepics>=3.2.5rc3
+jupyter>=1.0.0
+numpy>=1.11.0
+matplotlib>=1.5.1
