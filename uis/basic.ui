@@ -197,7 +197,7 @@
    <item>
     <widget class="QEPlot" name="qeplot">
      <property name="variable1" stdset="0">
-      <string>PYEPICS_DEMO:SPECTRUM</string>
+      <string>PYEPICS_DEMO:WAVE</string>
      </property>
     </widget>
    </item>

@@ -17,7 +17,7 @@ pyepics_DBD += base.dbd
 
 # Include dbd files from all support applications:
 pyepics_DBD += subroutine.dbd
-pyepics_DBD += spectrum.dbd
+pyepics_DBD += wave.dbd
 
 # Add all the support libraries needed by this IOC
 #pyepics_LIBS += xxx
@@ -26,7 +26,7 @@ pyepics_DBD += spectrum.dbd
 pyepics_SRCS += pyepics_registerRecordDeviceDriver.cpp
 
 pyepics_SRCS += subroutine.c
-pyepics_SRCS += spectrum.c
+pyepics_SRCS += wave.c
 
 # Build the main IOC entry point on workstation OSs.
 pyepics_SRCS_DEFAULT += pyepicsMain.cpp

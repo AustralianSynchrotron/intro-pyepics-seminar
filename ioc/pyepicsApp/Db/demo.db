@@ -1,6 +1,10 @@
 record (ao, "PYEPICS_DEMO:SETPOINT") {
   field (VAL, "7")
   field (PINI, "YES")
+  field (DRVL, 0)
+  field (DRVH, 10)
+  field (LOPR, 0)
+  field (HOPR, 10)
 }
 
 
@@ -23,18 +27,18 @@ record (sub, "PYEPICS_DEMO:TEMPERATURE") {
 }
 
 
-record (aSub, "PYEPICS_DEMO:SPECTRUM_GENERATOR") {
+record (aSub, "PYEPICS_DEMO:WAVE_GENERATOR") {
   field (SCAN, "1 second")
-  field (SNAM, "processSpectrum")
+  field (SNAM, "processWave")
   field (FTVA, "FLOAT")
-  field (NOVA, "100")
-  field (OUTA, "PYEPICS_DEMO:SPECTRUM PP")
+  field (NOVA, "1000")
+  field (OUTA, "PYEPICS_DEMO:WAVE PP")
 }
 
 
-record (waveform, "PYEPICS_DEMO:SPECTRUM") {
+record (waveform, "PYEPICS_DEMO:WAVE") {
   field (FTVL, "FLOAT")
-  field (NELM, "100")
+  field (NELM, "1000")
 }
 
 
@@ -44,4 +48,7 @@ record (mbbo, "PYEPICS_DEMO:COLOUR") {
   field (ZRST, "red")
   field (ONST, "green")
   field (TWST, "blue")
+  field (ZRSV, "MAJOR")
+  field (ONSV, "NO_ALARM")
+  field (TWSV, "NO_ALARM")
 }
