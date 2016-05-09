@@ -35,6 +35,10 @@ record (sub, "PYEPICS_DEMO:TEMPERATURE") {
   field (SNAM, "processSubroutine")
   field (PREC, 3)
   field (EGU, "C")
+  field (LOLO, 0)
+  field (HIHI, 100)
+  field (LLSV, MAJOR)
+  field (HHSV, MAJOR)
 }
 
 
