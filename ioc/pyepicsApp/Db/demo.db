@@ -5,6 +5,7 @@ record (ao, "PYEPICS_DEMO:SETPOINT") {
   field (DRVH, 10)
   field (LOPR, 0)
   field (HOPR, 10)
+  field (EGU, "mm")
 }
 
 
@@ -13,6 +14,7 @@ record (sub, "PYEPICS_DEMO:READBACK") {
   field (SNAM, "processReadback")
   field (INPA, "PYEPICS_DEMO:SETPOINT")
   field (PREC, 3)
+  field (EGU, "mm")
 }
 
 
@@ -32,6 +34,7 @@ record (sub, "PYEPICS_DEMO:TEMPERATURE") {
   field (INAM, "initSubroutine")
   field (SNAM, "processSubroutine")
   field (PREC, 3)
+  field (EGU, "C")
 }
 
 
