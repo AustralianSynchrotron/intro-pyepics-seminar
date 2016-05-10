@@ -1,0 +1,4 @@
+record(ai, "PYEPICS_DEMO:VAL$(NUM)")
+{
+    field(VAL, "$(NUM)")
+}

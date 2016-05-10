@@ -6,3 +6,4 @@ ioc/iocBoot/iocpyepics/envPaths
 ioc/pyepicsApp/Db/O.darwin-x86/
 ioc/pyepicsApp/src/O.Common/
 ioc/pyepicsApp/src/O.darwin-x86/
+demo_device_state.txt
