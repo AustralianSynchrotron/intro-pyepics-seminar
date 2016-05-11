@@ -3,6 +3,7 @@ To look at the code
 
 `Open the Notebook file on GitHub <https://github.com/AustralianSynchrotron/intro-pyepics-seminar/blob/master/Intro%20to%20PyEPICS.ipynb>`_.
 
+
 To start the demo IOC
 ---------------------
 
@@ -13,6 +14,7 @@ To start the demo IOC
     make
     cd iocBoot/iocpyepics
     ./st.cmd
+
 
 To run the Notebook
 -------------------
@@ -29,6 +31,16 @@ To run the Notebook in presentation mode
 Install the `RISE Jupyter extension <https://github.com/damianavila/RISE>`_.
 
 Click the "Enter Live Reveal Slideshow" icon in the Toolbar.
+
+
+To run the included QEGui interface
+-----------------------------------
+
+1. `Install QEGui <https://sourceforge.net/projects/epicsqt/>`_.
+2. Run::
+
+    qegui uis/basic.ui
+
 
 Further reading
 ---------------
