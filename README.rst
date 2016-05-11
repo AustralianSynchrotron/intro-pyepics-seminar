@@ -7,9 +7,9 @@ To look at the code
 To start the demo IOC
 ---------------------
 
-1. Update `EPICS_BASE` in `ioc/configure/RELEASE`.
-2. Update your architecture on the first line of `ioc/iocBoot/iocpyepics/st.cmd`.
-3. In the `ioc` folder, run::
+1. Update ``EPICS_BASE`` in ``ioc/configure/RELEASE``.
+2. Update your architecture on the first line of ``ioc/iocBoot/iocpyepics/st.cmd``.
+3. In the ``ioc`` folder, run::
 
     make
     cd iocBoot/iocpyepics
