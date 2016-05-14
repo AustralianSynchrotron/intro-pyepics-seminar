@@ -7,22 +7,16 @@ To look at the code
 To start the demo IOC
 ---------------------
 
-1. Download and unzip `EPICS base <http://www.aps.anl.gov/epics/base/R3-14/12.php>`_
-   to somewhere like ``/opt/epics/base``.
-2. Setup EPICS environment variables for your system. Eg, on Mac add to your
-   ``~/.bashrc`` (don't forget to source this file afterwards)::
+1. Download and compile EPICS base.
+2. Ensure the following environment variables are set:
 
-    export EPICS_BASE=/opt/epics/base
-    export EPICS_HOST_ARCH=darwin-x86
+  * ``EPICS_BASE``: Path to EPICS base folder.
+  * ``EPICS_HOST_ARCH``: Eg ``linux-x86_64``,  ``darwin-x86`` or ``windows-x64``.
+  * ``PATH``: Make sure ``$EPICS_BASE/bin/$EPICS_HOST_ARCH`` is on your path.
 
 3. Update ``EPICS_BASE`` in ``ioc/configure/RELEASE``.
-4. Update your architecture on the first line of ``ioc/iocBoot/iocpyepics/st.cmd``
-   (eg if you are on linux change ``darwin-x86`` to ``linux-x86_64``).
-5. In the ``ioc`` folder, run::
-
-    make
-    cd iocBoot/iocpyepics
-    ./st.cmd
+4. Run ``make`` from within the ``ioc`` folder.
+5. Run either ``start-ioc-linux-osx.sh`` or ``start-ioc-windows.cmd``.
 
 
 To run the Notebook

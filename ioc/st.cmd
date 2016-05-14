@@ -1,17 +1,6 @@
-#!../../bin/darwin-x86/pyepics
-
-## You may have to change pyepics to something else
-## everywhere it appears in this file
-
-< envPaths
-
-cd "${TOP}"
-
-## Register all support components
 dbLoadDatabase "dbd/pyepics.dbd"
 pyepics_registerRecordDeviceDriver pdbbase
 
-## Load record instances
 dbLoadRecords("db/demo.db")
 dbLoadRecords("db/val.db", "NUM=00")
 dbLoadRecords("db/val.db", "NUM=01")
@@ -114,8 +103,4 @@ dbLoadRecords("db/val.db", "NUM=97")
 dbLoadRecords("db/val.db", "NUM=98")
 dbLoadRecords("db/val.db", "NUM=99")
 
-cd "${TOP}/iocBoot/${IOC}"
 iocInit
-
-## Start any sequence programs
-#seq sncxxx,"user=robbieHost"
