@@ -10,9 +10,9 @@ To start the demo IOC
 1. Download and compile EPICS base.
 2. Ensure the following environment variables are set:
 
-  * ``EPICS_BASE``: Path to EPICS base folder.
-  * ``EPICS_HOST_ARCH``: Eg ``linux-x86_64``,  ``darwin-x86`` or ``windows-x64``.
-  * ``PATH``: Make sure ``$EPICS_BASE/bin/$EPICS_HOST_ARCH`` is on your path.
+   * ``EPICS_BASE``: Path to EPICS base folder.
+   * ``EPICS_HOST_ARCH``: Eg ``linux-x86_64``,  ``darwin-x86`` or ``windows-x64``.
+   * ``PATH``: Make sure ``$EPICS_BASE/bin/$EPICS_HOST_ARCH`` is on your path.
 
 3. Update ``EPICS_BASE`` in ``ioc/configure/RELEASE``.
 4. Run ``make`` from within the ``ioc`` folder.
@@ -22,7 +22,7 @@ To start the demo IOC
 To run the Notebook
 -------------------
 
-You will require EPICS base to be compiled and the EPICS environment variables
+You will need EPICS base to be compiled and the EPICS environment variables
 defined (see above).
 
 You will also need Python 3. The easiest way to get it is via the `Anaconda
