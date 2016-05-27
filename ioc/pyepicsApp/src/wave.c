@@ -21,7 +21,8 @@ static long processWave (aSubRecord* record) {
   int numWaves = 3;
   double noiseAmpl = .1;
   double signal, noise;
-  for (long i = 0; i < record->nova; i++) {
+  long i;
+  for (i = 0; i < record->nova; i++) {
     double x = (double)i / 100;
     signal = sin(x + vt) +
              sin(2 * x + vt + .1) +
