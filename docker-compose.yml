@@ -1,0 +1,15 @@
+version: '2'
+services:
+  ioc:
+    build:
+      context: .
+      dockerfile: docker/ioc.dockerfile
+    tty: true
+  notebook:
+    build:
+      context: .
+      dockerfile: docker/notebook.dockerfile
+    environment:
+      EPICS_CA_ADDR_LIST: ioc
+    ports:
+      - "9999:9999"

@@ -1,7 +1,23 @@
 To look at the code
 -------------------
 
-`Open the Notebook file on GitHub <https://github.com/AustralianSynchrotron/intro-pyepics-seminar/blob/master/Intro%20to%20PyEPICS.ipynb>`_.
+`Open the Notebook file on GitHub <https://github.com/AustralianSynchrotron/intro-pyepics-seminar/blob/master/Intro_to_PyEPICS.ipynb>`_.
+
+
+To run the Notebook and demo IOC with Docker
+--------------------------------------------
+
+1. Ensure you have `git <https://git-scm.com/downloads>`_, `Docker
+   <https://www.docker.com/>`_ and `Docker Compose
+   <https://www.docker.com/products/docker-compose>`_ installed.
+2. Run::
+
+    git clone https://github.com/AustralianSynchrotron/intro-pyepics-seminar
+    cd intro-pyepics-seminar
+    docker-compose up -d
+
+3. Open http://localhost:9999 in your browser. If you are running Docker
+   Machine replace "localhost" with the IP address from ``docker-machine ip``.
 
 
 To start the demo IOC
